@@ -12,6 +12,7 @@ body {
     color: rgb(255, 255, 255);
 }
 
+
 .navbar {
     display: flex;
     justify-content: space-between;
@@ -44,6 +45,7 @@ body {
     align-items: center;
     border-radius: 5px;
 }
+
 
 .login-container {
     width: 350px;
@@ -186,13 +188,6 @@ body {
     object-fit: cover;
     margin-right: 10px;
 }
-@keyframes cricketMove {
-    0% { transform: translateY(0); opacity: 1; }
-    50% { transform: translateY(-20px); opacity: 0.8; }
-    100% { transform: translateY(0); opacity: 1; }
-}
-
-
 /* Continuous Loop Animation */
 @keyframes slide {
     0% { transform: translateX(0); }
@@ -271,6 +266,93 @@ body {
     border-radius: 20px;
     background-color: #f9f9f9;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Base styles remain unchanged */
+
+/* Media Queries for Responsive Design */
+
+/* For tablets and small screens (max-width: 1024px) */
+@media (max-width: 1024px) {
+    .navbar {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .navbar img {
+        width: 20px; /* Adjust icon size */
+        height: 20px;
+    }
+    
+    .search-bar {
+        width: 100%;
+        max-width: 600px;
+    }
+    
+    .categories-container {
+        grid-template-columns: repeat(4, 1fr); /* Adjust to 4 columns */
+    }
+    
+    .products-container {
+        grid-template-columns: repeat(2, 1fr); /* Adjust to 2 columns */
+    }
+}
+
+/* For mobile devices (max-width: 768px) */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        padding: 10px;
+    }
+    .navbar img {
+        width: 20px; /* Adjust icon size */
+        height: 20px;
+    }
+    .search-bar {
+        width: 100%;
+    }
+    .menu{
+        flex-direction: left;
+    }
+
+    .categories-container {
+        grid-template-columns: repeat(2, 1fr); /* Adjust to 2 columns */
+    }
+    
+    .products-container {
+        grid-template-columns: repeat(1, 1fr); /* Show one item per row */
+    }
+    
+    .product img {
+        width: 100px; /* Reduce image size for smaller screens */
+    }
+}
+
+/* For extra small screens (max-width: 480px) */
+@media (max-width: 480px) {
+    .navbar {
+        flex-direction: column;
+        align-items: center;
+    }
+    .navbar img {
+        width: 20px; /* Adjust icon size */
+        height: 20px;
+    }
+    .search-bar {
+        width: 100%;
+    }
+    
+    .categories-container {
+        grid-template-columns: repeat(1, 1fr); /* Stack items in one column */
+    }
+    
+    .products-container {
+        grid-template-columns: repeat(1, 1fr); /* Show one item per row */
+    }
+    
+    .product img {
+        width: 80px; /* Further reduce image size */
+    }
 }
 
 
